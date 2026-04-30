@@ -8,6 +8,8 @@ set number
 set relativenumber
 
 " Indenting
+filetype plugin indent on
+set autoindent
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
@@ -20,7 +22,6 @@ set backspace=indent,eol,start
 
 
 " No swapfile, but backup (not sure if works)
-" filetype plugin indent on
 set noswapfile
 set nobackup
 let s:undodir = $HOME . '/.vim/undodir'
