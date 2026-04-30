@@ -2,7 +2,7 @@
 " Keep sign column
 set signcolumn=yes
 " Background color for sign column
-highlight SignColumn ctermbg=8 guibg=#002b36
+highlight SignColumn ctermbg=NONE guibg=NONE
 " Recommended adds
 " set statusline+=%#warningmsg#
 " set statusline+=%{SyntasticStatuslineFlag()}
@@ -21,4 +21,3 @@ let g:syntastic_check_on_wq = 1
 
 " Set flake8 as the Python checker
 let g:syntastic_python_checkers = ['flake8']
-

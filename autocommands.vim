@@ -1,9 +1,12 @@
 " Leave insert mode on focus lost
-au FocusLost,TabLeave * call feedkeys("\<C-\>\<C-n>")
-" Save on focus lost
-au FocusLost,TabLeave * :wa
+autocmd FocusLost,TabLeave * call feedkeys("\<C-\>\<C-n>")
+
+" Write on focus lost
+autocmd BufLeave,FocusLost * silent! wall
+
 " Prevent vim from clearing clipboard upon exit
-au VimLeave * call system("xclip", getreg('+'))
+autocmd VimLeave * call system("xclip", getreg('+'))
+
 " Remove trailing white spaces
 function! <SID>StripTrailingWhitespaces()
   let l = line(".")
@@ -12,5 +15,6 @@ function! <SID>StripTrailingWhitespaces()
   %s/\($\n\s*\)\+\%$//e " Strips trailing lines
   call cursor(l, c)
 endfunction
+
 " Remove trailing whitespace when saving
-au BufWritePre * :call <SID>StripTrailingWhitespaces()
+autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()

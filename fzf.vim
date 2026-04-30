@@ -1,5 +1,6 @@
-nnoremap <leader>ff :Files<CR>
-nnoremap <leader>fo :History<CR>
-nnoremap <leader>fb :Buffer<CR>
+nnoremap <leader>pf :Files<CR>
+nnoremap <leader>pg :GFiles<CR>
+nnoremap <leader>ph :History<CR>
+nnoremap <leader>pb :Buffer<CR>
 
-nnoremap <leader>fg :Rg<Space>
+nnoremap <leader>ps :Rg<Space>

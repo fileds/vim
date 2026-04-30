@@ -1,2 +1,4 @@
 .netrwist
 plugged/
+undodir/
+nvim-undodir/

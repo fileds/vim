@@ -7,3 +7,4 @@ source ~/.vim/fzf.vim
 source ~/.vim/lightline.vim
 source ~/.vim/syntastic.vim
 source ~/.vim/youcompleteme.vim
+source ~/.vim/undotree.vim
