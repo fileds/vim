@@ -5,7 +5,7 @@ autocmd FocusLost,TabLeave * call feedkeys("\<C-\>\<C-n>")
 autocmd BufLeave,FocusLost * silent! wall
 
 " Prevent vim from clearing clipboard upon exit
-autocmd VimLeave * call system("xclip", getreg('+'))
+" autocmd VimLeave * call system("xclip", getreg('+'))
 
 " Remove trailing white spaces
 function! <SID>StripTrailingWhitespaces()

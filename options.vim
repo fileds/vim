@@ -2,7 +2,6 @@
 set guicursor=n-v-c:block
 set guicursor+=i-ci-ve:block-blinkwait300-blinkon200-blinkoff150
 
-
 " Line numbers
 set number
 set relativenumber
@@ -20,7 +19,6 @@ set nowrap
 " Normal backspace behavior
 set backspace=indent,eol,start
 
-
 " No swapfile, but backup (not sure if works)
 set noswapfile
 set nobackup
@@ -35,7 +33,7 @@ set undofile
 syntax on
 set cursorcolumn
 set cursorline
-set nohlsearch
+" set nohlsearch
 set incsearch
 
 set termguicolors
