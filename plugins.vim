@@ -1,24 +1,21 @@
+" Handling plugins with junegunn/vim-plug
+
+call plug#begin('~/.vim/plugged')
+
+" Colorschemes
+Plug 'altercation/vim-colors-solarized'
+Plug 'ghifarit53/tokyonight-vim'
+" Fuzzy file finding
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+" Prettier status line
+Plug 'itchyny/lightline.vim'
+" Instead of swap file, undo even after quitting!
+Plug 'mbbill/undotree'
+" LSP for autocompletion, linting, go to definition, and much more
+Plug 'yegappan/lsp'
+" Split function arguments across lines
+Plug 'FooSoft/vim-argwrap'
+
+call plug#end()
 let s:plugin_dir = expand('~/.vim/plugged')
-
-function! s:ensure(repo)
-    let name = split(a:repo, '/')[-1]
-    let path = s:plugin_dir . '/' . name
-
-    if !isdirectory(path)
-        if !isdirectory(s:plugin_dir)
-            call mkdir(s:plugin_dir, 'p')
-        endif
-        execute '!git clone --depth=1 https://github.com/' . a:repo . ' ' . shellescape(path)
-    endif
-
-    execute 'set runtimepath+=' . fnameescape(path)
-endfunction
-
-call s:ensure('junegunn/fzf')
-call s:ensure('junegunn/fzf.vim')
-call s:ensure('itchyny/lightline.vim')
-call s:ensure('vim-syntastic/syntastic')
-call s:ensure('ycm-core/YouCompleteMe')
-call s:ensure('altercation/vim-colors-solarized')
-call s:ensure('ghifarit53/tokyonight-vim')
-call s:ensure('mbbill/undotree')

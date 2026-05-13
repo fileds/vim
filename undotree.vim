@@ -1,1 +1,2 @@
-nnoremap <leader>u :UndotreeToggle<CR>
+" Settings for undotree
+" Keybinds are in keybinds.vim

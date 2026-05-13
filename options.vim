@@ -2,6 +2,9 @@
 set guicursor=n-v-c:block
 set guicursor+=i-ci-ve:block-blinkwait300-blinkon200-blinkoff150
 
+" Enable mouse
+set mouse=a
+
 " Line numbers
 set number
 set relativenumber
@@ -19,7 +22,7 @@ set nowrap
 " Normal backspace behavior
 set backspace=indent,eol,start
 
-" No swapfile, but backup (not sure if works)
+" No swapfile, but backup
 set noswapfile
 set nobackup
 let s:undodir = $HOME . '/.vim/undodir'
@@ -44,3 +47,7 @@ set isfname+=@-@
 
 set updatetime=50
 set colorcolumn=80
+
+" Visual completion menu above commandline
+set wildmenu
+set wildignorecase
