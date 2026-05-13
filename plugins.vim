@@ -14,6 +14,8 @@ Plug 'itchyny/lightline.vim'
 Plug 'mbbill/undotree'
 " LSP for autocompletion, linting, go to definition, and much more
 Plug 'yegappan/lsp'
+" Better syntax highlighting
+Plug 'sheerun/vim-polyglot'
 " Split function arguments across lines
 Plug 'FooSoft/vim-argwrap'
 

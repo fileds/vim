@@ -12,10 +12,15 @@ function! s:LspConfig() abort
         \  showDiagInPopup:         v:true,
         \  showDiagWithSign:        v:true,
         \  showDiagWithVirtualText: v:false,
-        \  highlightDiagInline:     v:true,
+        \  highlightDiagInline:     v:false,
         \  showSignature:           v:true,
         \  hoverInPreview:          v:false,
         \  outlineOnRight:          v:true,
+        \  showDiagOnStatusLine:    v:true,
+        \  diagSignErrorText:       'E>',
+        \  diagSignHintText:        'H>',
+        \  diagSignInfoText:        'I>',
+        \  diagSignWarningText:     'W>',
         \ })
     " ── Servers ──────────────────────────────────────────────────────────
     call LspAddServer([#{

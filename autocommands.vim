@@ -18,8 +18,3 @@ endfunction
 
 " Remove trailing whitespace when saving
 autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
-
-" Make popups transparent (Not working?)
-autocmd BufWinEnter * if &buftype == 'popup' |
-            \ call setwinvar(win_getid(), '&winblend', 30) |
-            \ endif
