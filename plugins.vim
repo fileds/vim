@@ -18,6 +18,8 @@ Plug 'yegappan/lsp'
 Plug 'sheerun/vim-polyglot'
 " Split function arguments across lines
 Plug 'FooSoft/vim-argwrap'
+" CSV
+Plug 'chrisbra/csv.vim'
 
 call plug#end()
 let s:plugin_dir = expand('~/.vim/plugged')
