@@ -3,6 +3,7 @@ let mapleader = " "
 " ── Vanilla ────────────────────────────────────────────────────────────────
 " Open Netrw
 nnoremap <leader>pv :Ex<CR>
+" Just use :E
 
 " Move highlighted lines
 vnoremap <nowait> J :m '>+1<CR>gv=gv

@@ -5,6 +5,8 @@ call plug#begin('~/.vim/plugged')
 " Colorschemes
 Plug 'altercation/vim-colors-solarized'
 Plug 'ghifarit53/tokyonight-vim'
+" Git
+Plug 'tpope/vim-fugitive'
 " Fuzzy file finding
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
