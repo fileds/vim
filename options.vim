@@ -36,7 +36,7 @@ set undofile
 syntax on
 set cursorcolumn
 set cursorline
-" set nohlsearch
+set nohlsearch
 set incsearch
 
 set termguicolors
