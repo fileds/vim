@@ -12,7 +12,7 @@ function! s:LspConfig() abort
         \  showDiagInPopup:         v:true,
         \  showDiagWithSign:        v:true,
         \  showDiagWithVirtualText: v:false,
-        \  highlightDiagInline:     v:false,
+        \  highlightDiagInline:     v:true,
         \  showSignature:           v:true,
         \  hoverInPreview:          v:false,
         \  outlineOnRight:          v:true,
@@ -23,20 +23,37 @@ function! s:LspConfig() abort
         \  diagSignWarningText:     'W>',
         \ })
     " ── Servers ──────────────────────────────────────────────────────────
-    call LspAddServer([#{
-        \  name:     'pylsp',
-        \  filetype: ['python'],
-        \  path:     exepath('pylsp'),
-        \  args:     [],
-        \ }, #{
-        \  name:     'r-languageserver',
-        \  filetype: ['r', 'rmd'],
-        \  path:     exepath('Rscript'),
-        \  args:     ['-e', 'languageserver::run()'],
-        \ }, #{
-        \  name:     'texlab',
-        \  filetype: ['tex', 'plaintex', 'bib'],
-        \  path:     exepath('texlab'),
-        \  args:     [],
-        \ }])
+    call LspAddServer([
+                \ #{
+                \  name:     'pylsp',
+                \  filetype: ['python'],
+                \  path:     exepath('pylsp'),
+                \  args:     [],
+                \ }
+                \ ])
+    call LspAddServer([
+                \ #{
+                \  name:     'r-languageserver',
+                \  filetype: ['r', 'rmd'],
+                \  path:     exepath('Rscript'),
+                \  args:     ['-e', 'languageserver::run()'],
+                \ }
+                \ ])
+    call LspAddServer([
+                \ #{
+                \  name:     'texlab',
+                \  filetype: ['tex', 'plaintex', 'bib'],
+                \  path:     exepath('texlab'),
+                \  args:     [],
+                \ }
+                \ ])
+    call LspAddServer([
+                \ #{
+                \  name:     'rustlang',
+                \  filetype: ['rust', 'rs'],
+                \  path:     exepath('rust-analyzer'),
+                \  args:     [],
+                \  syncInit: v:true
+                \ }
+                \ ])
 endfunction

@@ -7,6 +7,14 @@ autocmd BufLeave,FocusLost * silent! wall
 " Prevent vim from clearing clipboard upon exit
 " autocmd VimLeave * call system("xclip", getreg('+'))
 
+" Set linewrap for text editing
+augroup TextFiles
+    autocmd!
+    autocmd FileType tex setlocal wrap
+    autocmd FileType quarto setlocal wrap
+augroup END
+
+
 " Remove trailing white spaces
 function! <SID>StripTrailingWhitespaces()
     let l = line(".")

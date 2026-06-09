@@ -18,8 +18,12 @@ Plug 'yegappan/lsp'
 Plug 'sheerun/vim-polyglot'
 " Split function arguments across lines
 Plug 'FooSoft/vim-argwrap'
-" CSV
+" CSV (I think there should be a better one, rainbow csv?)
 Plug 'chrisbra/csv.vim'
+" Quarto syntax highlighting
+Plug 'quarto-dev/quarto-vim'
+" Rust file detection, syntax highlightin formatting
+Plug 'rust-lang/rust.vim'
 
 call plug#end()
 let s:plugin_dir = expand('~/.vim/plugged')
