@@ -28,6 +28,8 @@ Plug 'mechatroner/rainbow_csv'
 Plug 'quarto-dev/quarto-vim'
 " Rust file detection, syntax highlightin formatting
 Plug 'rust-lang/rust.vim'
+" Aligning latex tables
+Plug 'godlygeek/tabular'
 
 call plug#end()
 let s:plugin_dir = expand('~/.vim/plugged')
